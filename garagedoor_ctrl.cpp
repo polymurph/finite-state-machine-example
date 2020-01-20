@@ -3,6 +3,18 @@
 #include <iostream>
 using namespace std;
 
+
+const Garagedoor_ctrl::Transition Garagedoor_ctrl::fsm[] = //defining FSM
+{
+  {closedState, evBtn, &Garagedoor_ctrl::actionOpening, openingState},
+  {openingState, evOpen, &Garagedoor_ctrl::actionOpen, openState},
+  {openingState, evBtn, &Garagedoor_ctrl::actionStop, stopState},
+  {openState, evBtn, &Garagedoor_ctrl::actionClosing, closingState},
+  {closingState, evClosed, &Garagedoor_ctrl::actionClosed, closedState},
+  {closingState, evBtn, &Garagedoor_ctrl::actionStop, stopState}
+  
+};
+
 Garagedoor_ctrl::Garagedoor_ctrl()
 {
 
