@@ -12,8 +12,8 @@ const Garagedoor_ctrl::Transition Garagedoor_ctrl::fsm[] = //defining FSM
   {openState, evBtn, &Garagedoor_ctrl::actionClosing, closingState},
   {closingState, evClosed, &Garagedoor_ctrl::actionClosed, closedState},
   {closingState, evBtn, &Garagedoor_ctrl::actionStop, stopClosingState},
-  {stopState, evBtn, &Garagedoor_ctrl::, }
-
+  {stopOpeningState, evBtn, &Garagedoor_ctrl::actionClosing, closingState},
+  {stopClosingState, evBtn, &Garagedoor_ctrl::actionOpening, openingState}
 };
 
 Garagedoor_ctrl::Garagedoor_ctrl() :
@@ -34,11 +34,6 @@ void Garagedoor_ctrl::process(Event e)
       break;
     }
   }
-}
-
-void Garagedoor_ctrl::actionClosing(void)
-{
-  door.open();
 }
 
 void Garagedoor_ctrl::actionClosed(void)
@@ -64,14 +59,4 @@ void Garagedoor_ctrl::actionOpen(void)
 void Garagedoor_ctrl::actionStop(void)
 {
  door.stop();
-}
-
-void Garagedoor_ctrl::actionOpeningStop(void)
-{
-
-}
-
-void Garagedoor_ctrl::actionClosingStop(void)
-{
-  
 }

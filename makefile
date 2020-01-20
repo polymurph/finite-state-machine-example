@@ -7,20 +7,20 @@ LINK = g++
 # '-pedantic' sorgt dafuer, dass g++ streng arbeitet
 CFLAGS = -c -pedantic -Wall
 LFLAGS = -pedantic -Wall
-OBJS = ValveCtrl.o valveTest.o Valve.o
-EXE = valveTest
+OBJS = garagedoor.o garagedoor_ctrl.o garagedoor_test.o
+EXE = door
 
 $(EXE): $(OBJS)
 	$(LINK) $(LFLAGS) -o $(EXE) $(OBJS)
 
-valveTest.o: valveTest.cpp ValveCtrl.h
-	$(CC) $(CFLAGS) valveTest.cpp
+garagedoor_test.o: garagedoor_test.cpp garagedoor_ctrl.h
+	$(CC) $(CFLAGS) garagedoor_test.cpp
 
-ValveCtrl.o: ValveCtrl.cpp ValveCtrl.h
-	$(CC) $(CFLAGS) ValveCtrl.cpp
+garagedoor_ctrl.o: garagedoor_ctrl.cpp garagedoor_ctrl.h
+	$(CC) $(CFLAGS) garagedoor_ctrl.cpp
 
-Valve.o: Valve.cpp Valve.h
-	$(CC) $(CFLAGS) Valve.cpp
+garagedoor.o: garagedoor.cpp garagedoor.h
+	$(CC) $(CFLAGS) garagedoor.cpp
 
 clean:
 	# for UNIX

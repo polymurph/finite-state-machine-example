@@ -1,7 +1,7 @@
 #ifndef _GARAGEDOOR_H_
 #define _GARAGEDOOR_H_
 
-class Garagedoor :
+class Garagedoor
 {
 public:
   Garagedoor();
@@ -9,6 +9,6 @@ public:
   void close();
   void stop();
 private:
-}
+};
 
 #endif // _GARAGEDOOR_H_

@@ -1,5 +1,5 @@
+#include <iostream>
 #include "garagedoor.h"
-#incldue <iostream>
 
 using namespace std;
 
