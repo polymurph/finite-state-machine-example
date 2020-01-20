@@ -42,9 +42,9 @@ private:
     Action pAction;       // pointer to action function
     State nextState;      // next state
   };
-
+  static const Transition fsm[];
   // the door
   Garagedoor door;
-}
+};
 
 #endif
