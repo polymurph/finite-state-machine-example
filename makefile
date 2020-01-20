@@ -24,6 +24,6 @@ Valve.o: Valve.cpp Valve.h
 
 clean:
 	# for UNIX
-	rm -f $(EXE) $(OBJS)
+	#rm -f $(EXE) $(OBJS)
 	# for WIN
-	#del $(EXE) $(OBJS)
+	del $(EXE) $(OBJS)

@@ -4,7 +4,7 @@
 class Garagedoor :
 {
 public:
-  
+  Garagedoor();
 private:
 
 }
