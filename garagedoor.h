@@ -5,8 +5,10 @@ class Garagedoor :
 {
 public:
   Garagedoor();
+  void open();
+  void close();
+  void stop();
 private:
-
 }
 
-#endif
+#endif // _GARAGEDOOR_H_
