@@ -19,11 +19,13 @@ private:
     openState,
     closingState,
     closedState,
-    stopState
+    stopOpeningState,
+    stopClosingState
   };
 
   // holds the current state of the FSM
   State currentState;
+  State oldState;
 
   // action functions
   void actionClosing(void);
@@ -31,6 +33,7 @@ private:
   void actionOpening(void);
   void actionOpen(void);
   void actionStop(void);
+  void actionStopTransistion(void);
 
   // function ptr for action function
   typedef void (Garagedoor_ctrl::*Action)(void);
