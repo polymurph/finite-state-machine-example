@@ -10,12 +10,12 @@ Garagedoor::Garagedoor()
 
 void Garagedoor::open()
 {
-  cout << "Garagedoor: opening!" << endl;
+  cout << "Garagedoor: opening..." << endl;
 }
 
 void Garagedoor::close()
 {
-  cout << "Garagedoor: closing!" << endl;
+  cout << "Garagedoor: closing..." << endl;
 }
 
 void Garagedoor::stop()

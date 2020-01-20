@@ -6,9 +6,7 @@ class Garagedoor_ctrl:
 public:
 
     enum Event{ // defining events
-        evOpen,
-        evClose,
-        evStop
+        evBtn // Button pressed
     };
     Garagedoor_ctrl(); // Constructor
     void process (Event e); // changing the state based on the event e

@@ -20,7 +20,32 @@ void Garagedoor_ctrl::process(Event e)
   }
 }
 
-void Garagedoor_ctrl::actionClosing(void){
-  Garagedoor.op
+void Garagedoor_ctrl::actionClosing(void)
+{
+  door.open();
+}
 
+void Garagedoor_ctrl::actionClosed(void)
+{
+  cout <<"Door is closed!"<< endl;
+}
+
+void Garagedoor_ctrl::actionClosing(void)
+{
+  door.close();
+}
+
+void Garagedoor_ctrl::actionOpening(void)
+{
+  door.open();
+}
+
+void Garagedoor_ctrl::actionOpen(void)
+{
+  cout <<"Door is open!" << endl;
+}
+
+void Garagedoor_ctrl::actionStop(void)
+{
+ door.stop();
 }
