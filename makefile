@@ -24,6 +24,6 @@ garagedoor.o: garagedoor.cpp garagedoor.h
 
 clean:
 	# for UNIX
-	#rm -f $(EXE) $(OBJS)
+	rm -f $(EXE) $(OBJS)
 	# for WIN
-	del $(EXE) $(OBJS)
+	#del $(EXE) $(OBJS)
