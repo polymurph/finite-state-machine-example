@@ -22,6 +22,8 @@ Garagedoor_ctrl::Garagedoor_ctrl() :
 {
 
 }
+
+// process engine which handles the event
 void Garagedoor_ctrl::process(Event e)
 {
   for (size_t i=0; i < sizeof(fsm) / sizeof(Transition); ++i) // for each row
@@ -31,7 +33,7 @@ void Garagedoor_ctrl::process(Event e)
       (this->*fsm[i].pAction)();
       oldState = currentState;
       currentState = fsm[i].nextState;
-      break;
+      break;  // prevent seccondary executions that might occure!
     }
   }
 }
